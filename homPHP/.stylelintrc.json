@@ -1,0 +1,19 @@
+{
+	"extends": ["stylelint-config-standard-scss", "stylelint-config-rational-order"],
+	"customSyntax": "postcss-html",
+	"plugins": ["stylelint-scss"],
+	"overrides": [
+		{
+			"files": ["src/assets/style/**/*.scss"],
+			"customSyntax": "postcss-scss",
+			"rules": {
+				"color-named": "never"
+			}
+		}
+	],
+	"rules": {
+		"color-named": "never",
+		"block-no-empty": null,
+		"custom-property-empty-line-before": "never"
+	}
+}
