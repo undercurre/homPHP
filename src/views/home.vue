@@ -1,22 +1,25 @@
 <template>
-	<div class="flex w-screen h-screen">
+	<div class="relative w-screen h-screen">
 		<div class="ltd" ref="ltd">
-			<div>
+			<div class="absolute left-60px top-50px">
 				<span style="--ltd: 1">H</span>
 				<span style="--ltd: 2">O</span>
 				<span style="--ltd: 3">M</span>
 				<span style="--ltd: 4">E</span>
+				<span class="ml-100px text-50px" style="--ltd: 5">家居</span>
 			</div>
-			<div>
+			<div class="absolute left-230px top-150px">
 				<span style="--ltd: 1">H</span>
 				<span style="--ltd: 2">O</span>
 				<span style="--ltd: 3">M</span>
 				<span style="--ltd: 4">O</span>
+				<span class="ml-100px text-50px" style="--ltd: 5">和谐</span>
 			</div>
-			<div>
+			<div class="absolute left-400px top-250px">
 				<span style="--ltd: 1">L</span>
 				<span style="--ltd: 2">U</span>
 				<span style="--ltd: 3">X</span>
+				<span class="ml-220px text-50px" style="--ltd: 5">光照</span>
 			</div>
 		</div>
 	</div>
@@ -47,6 +50,7 @@ function closeingLetter() {
 }
 
 onMounted(() => {
+	// 走灯
 	setTimeout(() => {
 		lightingLetter();
 		setTimeout(() => closeingLetter(), 2000);
@@ -58,6 +62,7 @@ onMounted(() => {
 	setTimeout(() => {
 		lightingLetter();
 	}, 7000);
+	// 变字
 });
 </script>
 
@@ -72,14 +77,4 @@ onMounted(() => {
 	transition: 0.5s;
 	transition-delay: calc(var(--ltd) * 0.1s);
 }
-
-// .ltd:hover {
-// 	color: #fff;
-// 	text-shadow:
-// 		0 0 10px rgb(255 255 255 / 80%),
-// 		0 0 20px rgb(255 255 255 / 80%),
-// 		0 0 30px rgb(255 255 255 / 80%),
-// 		0 0 50px rgb(255 255 255 / 80%),
-// 		0 0 80px rgb(255 255 255 / 80%);
-// }
 </style>
