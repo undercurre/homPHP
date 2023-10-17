@@ -1,13 +1,16 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import HomeView from '../views/home.vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const router = createRouter({
-	history: createWebHistory(import.meta.env.VITE_BASE_URL),
+	history: createWebHashHistory('/homPHPDisplay/'),
 	routes: [
 		{
 			path: '/',
-			name: 'home',
-			component: HomeView
+			redirect: '/home'
+		},
+		{
+			path: '/home',
+			name: 'Home',
+			component: () => import('../views/home.vue')
 		}
 	]
 });

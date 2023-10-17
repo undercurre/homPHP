@@ -78,8 +78,6 @@
 			美的照明HOMLUX是一款基于微信小程序开发的智能照明控制系统，它包括了美智光电全自研的Zigbee3.0模组、PaaS平台、客户端应用、边缘网关、智能灯具、智能面板、智能传感器等多个组件。
 		</p>
 	</div>
-
-	<div class="w-screen h-screen"></div>
 </template>
 
 <script setup lang="ts">

@@ -13,7 +13,7 @@ import { viteMockServe } from 'vite-plugin-mock';
 import ViteCompression from 'vite-plugin-compression';
 import progress from 'vite-plugin-progress';
 import VueDevtools from 'vite-plugin-vue-devtools';
-import { webUpdateNotice } from '@plugin-web-update-notification/vite';
+// import { webUpdateNotice } from '@plugin-web-update-notification/vite';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
 import path from 'path';
 
@@ -73,11 +73,11 @@ export default [
 			setupMockServer();
 		`
 	}),
-	ViteCompression({ algorithm: 'gzip', deleteOriginFile: true }),
+	ViteCompression(),
 	progress(),
-	VueDevtools(),
-	webUpdateNotice({
-		logVersion: true,
-		versionType: 'pkg_version'
-	})
+	VueDevtools()
+	// webUpdateNotice({
+	// 	logVersion: true,
+	// 	versionType: 'pkg_version'
+	// })
 ];
