@@ -75,9 +75,11 @@
 			<span ref="ltX">X</span>
 		</div>
 		<p ref="desc" class="text absolute top-2/3 transform -translate-y-1/2">
-			美的照明HOMLUX是一款基于微信小程序开发的智能照明控制系统，它包括了美智光电全自研的Zigbee3.0模组、PaaS平台、客户端应用（小程序&APP）边缘网关、智能灯具、智能面板、智能传感器等多个组件。该系统适用于家居智能照明应用场景，并提供多种开放平台接入方案，开发者可以将HOMLUX系统集成到更多应用场景，例如智慧地产、智慧酒店、智慧办公及智慧养老等。该系统无需下载APP即可使用，用户可以直接通过微信小程序进行操作。
+			美的照明HOMLUX是一款基于微信小程序开发的智能照明控制系统，它包括了美智光电全自研的Zigbee3.0模组、PaaS平台、客户端应用、边缘网关、智能灯具、智能面板、智能传感器等多个组件。
 		</p>
 	</div>
+
+	<div class="w-screen h-screen"></div>
 </template>
 
 <script setup lang="ts">
@@ -213,23 +215,20 @@ const desc = ref<HTMLElement | null>(null);
 
 function showDesc() {
 	if (title.value != null && desc.value != null) {
-		title.value.style.top = '25%';
+		title.value.style.top = '35%';
 		desc.value.style.opacity = '1';
 	}
 }
 
 onMounted(async () => {
 	// 走灯
-	// await delay(1000);
-	// lightingLetter();
-	// await delay(2000);
-	// closeingLetter();
-	// await delay(1500);
-	// lightingLetter();
-	// await delay(2000);
-	// closeingLetter();
-	// await delay(2000);
-	// lightingLetter();
+	await delay(1000);
+	lightingLetter();
+	await delay(2000);
+	closeingLetter();
+	await delay(1500);
+	lightingLetter();
+	await delay(2000);
 	transformLetter();
 	await delay(2000);
 	transformBg();
